@@ -5,11 +5,23 @@
         "command": "-workbench.action.toggleSidebarVisibility"
     },
     {
+        "key": "cmd+b",
+        "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
         "key": "ctrl+b",
         "command": "workbench.action.showAllSymbols"
     },
     {
+        "key": "cmd+b",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
         "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
+    },
+    {
+        "key": "cmd+t",
         "command": "-workbench.action.showAllSymbols"
     },
     {
@@ -18,8 +30,8 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "ctrl+shift+`",
-        "command": "-workbench.action.terminal.new",
+        "key": "cmd+t",
+        "command": "workbench.action.terminal.new",
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     }
 ]
