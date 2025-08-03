@@ -1,0 +1,9 @@
+{
+    "workbench.colorTheme": "GitHub Dark Default",
+    "telemetry.feedback.enabled": false,
+    "telemetry.telemetryLevel": "off",
+    "continue.telemetryEnabled": false,
+    "mdb.sendTelemetry": false,
+    "editor.fontFamily": "Adwaita Mono, monospace",
+    "sqltools.useNodeRuntime": true,
+}
