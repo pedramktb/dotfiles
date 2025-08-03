@@ -1,9 +1,26 @@
 {
     "workbench.colorTheme": "GitHub Dark Default",
-    "telemetry.feedback.enabled": false,
-    "telemetry.telemetryLevel": "off",
-    "continue.telemetryEnabled": false,
-    "mdb.sendTelemetry": false,
+    "editor.fontSize": 14,
     "editor.fontFamily": "Adwaita Mono, monospace",
+    "editor.minimap.sectionHeaderFontSize": 11,
+    "chat.editor.fontSize": 14,
+    "debug.console.fontSize": 14,
+    "terminal.integrated.fontSize": 14,
+    "scm.inputFontSize": 14,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true,
+    "go.toolsManagement.autoUpdate": true,
+    "task": {
+        "outputTo": "terminal"
+    },
+    "continue.telemetryEnabled": false,
     "sqltools.useNodeRuntime": true,
+    "containers.containerClient": "com.microsoft.visualstudio.containers.docker",
+    "containers.orchestratorClient": "com.microsoft.visualstudio.orchestrators.dockercompose",
+    "redhat.telemetry.enabled": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.knownKubeconfigs": [
+            "~/.kube/config"
+        ]
+    }
 }
