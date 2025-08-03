@@ -23,5 +23,6 @@
         "vs-kubernetes.knownKubeconfigs": [
             "~/.kube/config"
         ]
-    }
+    },
+    "githubLocalActions.dockerDesktopPath": "/Applications/Docker.app"
 }
