@@ -1,0 +1,6 @@
+{
+    "DEV": {
+      "connectString": "192.168.41.142@ORA11g",
+      "users": [{ "user": "HSTA4", "password": "HSTA4" }]
+    }
+  }

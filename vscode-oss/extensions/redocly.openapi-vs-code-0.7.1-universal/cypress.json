@@ -1,0 +1,5 @@
+{
+  "fixturesFolder": "client/cypress/fixtures",
+  "integrationFolder": "client/cypress/integration",
+  "testFiles": "**/*.spec.ts"
+}

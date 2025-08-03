@@ -1,0 +1,3 @@
+Copyright 2021 (C) Redocly Inc, all rights reserved.
+
+See license agreement here: https://redocly.com/subscription-agreement/

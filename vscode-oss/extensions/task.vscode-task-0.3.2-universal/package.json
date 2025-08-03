@@ -1,0 +1,362 @@
+{
+	"name": "vscode-task",
+	"displayName": "Task",
+	"description": "A task runner / build tool that aims to be simpler and easier to use than, for example, GNU Make.",
+	"homepage": "https://taskfile.dev",
+	"icon": "res/icon.png",
+	"license": "MIT",
+	"version": "0.3.2",
+	"publisher": "task",
+	"author": {
+		"name": "Pete Davison",
+		"email": "pd93.uk@outlook.com",
+		"url": "https://github.com/pd93"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/go-task/vscode-task"
+	},
+	"sponsor": {
+		"url": "https://taskfile.dev/donate"
+	},
+	"bugs": {
+		"url": "https://github.com/go-task/vscode-task/issues"
+	},
+	"keywords": [
+		"task",
+		"go-task",
+		"taskfile"
+	],
+	"engines": {
+		"vscode": "^1.76.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vscode-task.init",
+				"title": "Initialize Taskfile",
+				"category": "Task",
+				"icon": "$(plus)"
+			},
+			{
+				"command": "vscode-task.refresh",
+				"title": "Refresh Tasks",
+				"category": "Task",
+				"icon": "$(refresh)"
+			},
+			{
+				"command": "vscode-task.viewAsList",
+				"title": "View as List",
+				"category": "Task Tree",
+				"icon": "$(list-tree)"
+			},
+			{
+				"command": "vscode-task.viewAsTree",
+				"title": "View as Tree",
+				"category": "Task Tree",
+				"icon": "$(list-flat)"
+			},
+			{
+				"command": "vscode-task.runTask",
+				"title": "Run Task",
+				"category": "Task",
+				"icon": "$(play)"
+			},
+			{
+				"command": "vscode-task.runTaskWithArgs",
+				"title": "Run Task With Args",
+				"category": "Task",
+				"icon": "$(run-all)"
+			},
+			{
+				"command": "vscode-task.runTaskPicker",
+				"title": "Run Task",
+				"category": "Task",
+				"icon": "$(play)"
+			},
+			{
+				"command": "vscode-task.runTaskPickerWithArgs",
+				"title": "Run Task With Args",
+				"category": "Task",
+				"icon": "$(play)"
+			},
+			{
+				"command": "vscode-task.runLastTask",
+				"title": "Run Last Task",
+				"category": "Task",
+				"icon": "$(redo)"
+			},
+			{
+				"command": "vscode-task.goToDefinition",
+				"title": "Go to Definition",
+				"category": "Task",
+				"icon": "$(go-to-file)"
+			},
+			{
+				"command": "vscode-task.goToDefinitionPicker",
+				"title": "Go to Definition",
+				"category": "Task",
+				"icon": "$(go-to-file)"
+			},
+			{
+				"command": "vscode-task.openInstallation",
+				"title": "Open Installation",
+				"category": "Task",
+				"icon": "$(globe)"
+			},
+			{
+				"command": "vscode-task.openUsage",
+				"title": "Open Usage",
+				"category": "Task",
+				"icon": "$(globe)"
+			},
+			{
+				"command": "vscode-task.showDebugPanel",
+				"title": "Show Debug Panel",
+				"category": "Task",
+				"icon": "$(debug)"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "vscode-task",
+					"title": "Task",
+					"icon": "./res/activityBarIcon.svg"
+				}
+			]
+		},
+		"views": {
+			"vscode-task": [
+				{
+					"id": "vscode-task.tasks",
+					"name": "Tasks"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "vscode-task.tasks",
+				"contents": "Task not installed. Click the button below to install it.\n[Install Task](command:vscode-task.openInstallation)\nTo learn more about how to use Task, [read our docs](https://taskfile.dev).",
+				"when": "vscode-task:status == 'notInstalled'"
+			},
+			{
+				"view": "vscode-task.tasks",
+				"contents": "Task is out of date. Click the button below to update it.\n[Update Task](command:vscode-task.openInstallation)\nTo learn more about how to use Task, [read our docs](https://taskfile.dev).",
+				"when": "vscode-task:status == 'outOfDate'"
+			},
+			{
+				"view": "vscode-task.tasks",
+				"contents": "No Taskfile found in this workspace. Click the button below to get started and initialize a new Taskfile.\n[Initialize Taskfile](command:vscode-task.init)\nTo learn more about how to use Task, [read our docs](https://taskfile.dev).",
+				"when": "vscode-task:status == 'noTaskfile'"
+			},
+			{
+				"view": "vscode-task.tasks",
+				"contents": "An error occurred while reading the Taskfile. [Check the output panel](command:vscode-task.showDebugPanel) for more information\nTo learn more about how to use Task, [read our docs](https://taskfile.dev).",
+				"when": "vscode-task:status == 'error'"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "vscode-task.runTask",
+					"when": "false"
+				},
+				{
+					"command": "vscode-task.runTaskWithArgs",
+					"when": "false"
+				},
+				{
+					"command": "vscode-task.goToDefinition",
+					"when": "false"
+				}
+			],
+			"view/title": [
+				{
+					"command": "vscode-task.openUsage",
+					"when": "view == vscode-task.tasks",
+					"group": "navigation@1"
+				},
+				{
+					"command": "vscode-task.refresh",
+					"when": "view == vscode-task.tasks",
+					"group": "navigation@2"
+				},
+				{
+					"command": "vscode-task.viewAsList",
+					"when": "view == vscode-task.tasks && vscode-task:treeNesting",
+					"group": "navigation@3"
+				},
+				{
+					"command": "vscode-task.viewAsTree",
+					"when": "view == vscode-task.tasks && !vscode-task:treeNesting",
+					"group": "navigation@4"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "vscode-task.goToDefinition",
+					"when": "view == vscode-task.tasks && viewItem == taskTreeItem",
+					"group": "inline@1"
+				},
+				{
+					"command": "vscode-task.runTask",
+					"when": "view == vscode-task.tasks && viewItem == taskTreeItem",
+					"group": "inline@2"
+				},
+				{
+					"command": "vscode-task.runTaskWithArgs",
+					"when": "view == vscode-task.tasks && viewItem == taskTreeItem",
+					"group": "inline@3"
+				}
+			]
+		},
+		"colors": [
+			{
+				"id": "vscodetask.workspaceIcon",
+				"description": "Color for workspace icons in the activity bar.",
+				"defaults": {
+					"dark": "#2e85e7",
+					"light": "#2e85e7",
+					"highContrast": "#2e85e7",
+					"highContrastLight": "#2e85e7"
+				}
+			},
+			{
+				"id": "vscodetask.namespaceIcon",
+				"description": "Color for namespace icons in the activity bar.",
+				"defaults": {
+					"dark": "#a677ff",
+					"light": "#a677ff",
+					"highContrast": "#a677ff",
+					"highContrastLight": "#a677ff"
+				}
+			},
+			{
+				"id": "vscodetask.upToDateIcon",
+				"description": "Color for up-to-date task icons in the activity bar.",
+				"defaults": {
+					"dark": "#00AA00",
+					"light": "#00AA00",
+					"highContrast": "#00AA00",
+					"highContrastLight": "#00AA00"
+				}
+			},
+			{
+				"id": "vscodetask.outOfDateIcon",
+				"description": "Color for out-of-date task icons in the activity bar.",
+				"defaults": {
+					"dark": "#ff9b05",
+					"light": "#ff9b05",
+					"highContrast": "#ff9b05",
+					"highContrastLight": "#ff9b05"
+				}
+			}
+		],
+		"configuration": {
+			"title": "Task configuration",
+			"properties": {
+				"task": {
+					"type": "object",
+					"description": "Task configuration options.",
+					"properties": {
+						"updateOn": {
+							"type": "string",
+							"enum": [
+								"save",
+								"manual"
+							],
+							"default": "save",
+							"description": "When the list of tasks should be updated."
+						},
+						"path": {
+							"type": "string",
+							"default": "task",
+							"description": "Path to the Task binary. Can also the name of a binary in your `$PATH`."
+						},
+						"outputTo": {
+							"type": "string",
+							"enum": [
+								"output",
+								"terminal"
+							],
+							"default": "output",
+							"description": "Where to print the output of tasks. Note that the output panel does not support ANSI colors."
+						},
+						"checkForUpdates": {
+							"type": "boolean",
+							"default": true,
+							"description": "Check if there is a newer version of Task on startup."
+						},
+						"tree": {
+							"type": "object",
+							"description": "Tree view configuration options.",
+							"properties": {
+								"nesting": {
+									"type": "boolean",
+									"default": true,
+									"description": "Whether to nest tasks by their namespace in the tree view."
+								},
+								"sort": {
+									"type": "string",
+									"enum": [
+										"default",
+										"alphanumeric",
+										"none"
+									],
+									"default": "default",
+									"description": "The order in which to display tasks in the tree view."
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"scripts": {
+		"bundle": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node --minify",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "yarn run compile && yarn run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js",
+		"package": "vsce package --yarn",
+		"publish:vsce": "vsce publish --yarn",
+		"publish:ovsx": "ovsx publish --yarn",
+		"vscode:prepublish": "yarn run bundle"
+	},
+	"devDependencies": {
+		"@types/glob": "^8.1.0",
+		"@types/mocha": "^10.0.1",
+		"@types/node": "20.x",
+		"@types/strip-ansi": "3.0.0",
+		"@types/vscode": "^1.76.0",
+		"@typescript-eslint/eslint-plugin": "^5.59.1",
+		"@typescript-eslint/parser": "^5.62.0",
+		"@vscode/test-electron": "^2.3.4",
+		"@vscode/vsce": "^2.19.0",
+		"esbuild": "^0.19.2",
+		"eslint": "^8.2.0",
+		"glob": "^8.1.0",
+		"mocha": "^10.2.0",
+		"ovsx": "^0.8.1",
+		"typescript": "^5.0.4"
+	},
+	"dependencies": {
+		"@octokit/types": "^9.0.0",
+		"octokit": "^2.0.14",
+		"semver": "^7.5.0",
+		"strip-ansi": "6.0.1"
+	},
+	"__metadata": {
+		"installedTimestamp": 1753345012611,
+		"targetPlatform": "universal",
+		"size": 762683
+	}
+}

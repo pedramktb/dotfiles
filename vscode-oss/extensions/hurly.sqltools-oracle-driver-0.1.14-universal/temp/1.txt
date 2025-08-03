@@ -1,0 +1,87 @@
+* hover显示内容(唯一索引)
+* 把结果放到sql console中
+* 支持文件方式进行宏定义替换
+* 增加引号的转义和反转义
+* 出错结果实际位置显示
+* 支持desc
+* 看原因(有时候补全请求发出，但是没有响应)       是sql解析的问题
+* sql的debug
+* 大文件不能加载插件的原因
+
+
+  private completionsCache: { [w: string]: NSDatabase.IStaticCompletion } = null;
+  public getStaticCompletions = async () => {
+    console.log('get static completion oracle');
+    if (this.completionsCache) return this.completionsCache;
+    try {
+      this.completionsCache = {};
+      const items = await this.queryResults(/* sql */`
+        select lower(t.keyword) as label,
+            decode(t.reserved,'Y','RESERVED KEYWORD','KEYWORD') "desc"
+          from V$RESERVED_WORDS t
+        order by t.keyword;
+      `);
+
+      items.forEach((item: any) => {
+        this.completionsCache[item.label] = {
+          label: item.label,
+          detail: item.label,
+          filterText: item.label,
+          sortText: (['SELECT', 'CREATE', 'UPDATE', 'DELETE'].includes(item.label) ? '2:' : '') + item.label,
+          documentation: {
+            value: `\`\`\`yaml\nWORD: ${item.label}\nTYPE: ${item.desc}\n\`\`\``,
+            kind: 'markdown'
+          }
+        }
+      });
+    } catch (error) {
+      // use default reserved words
+      this.completionsCache = keywordsCompletion;
+    }
+
+    return this.completionsCache;
+  }
+  
+
+  显示执行时间
+  
+  
+  64位加环境变量
+
+
+
+  实现hover的方案
+  1.  通过写文件的方式进行交互 
+
+
+  支持desc(通过创建视图实现)(不过好像有个command也可以弄(看看为什么现在没有结果))(包含索引信息)
+
+
+  考虑几个信息弄成一张表:
+  1. ttaflowlog
+  2. terrormess
+  3. TSYSPARAMETER
+  4. TDICTIONARY
+  5. queryfieldvalue
+
+
+
+  看看能不能直接调用plsql
+
+
+
+  获取offset,通过当前位置调用translate函数得到实际位置(https://code.visualstudio.com/api/references/vscode-api#Position.translate)
+
+
+  1. 多个select页面的时候不能滑动
+  2. 直接点复制会出现空的情况
+
+
+
+  支持分页的模式
+  /可以是除号(发生错误)
+
+
+
+刚开始是()的话会判断错误
+  
