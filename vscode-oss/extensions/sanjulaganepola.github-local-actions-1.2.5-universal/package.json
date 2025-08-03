@@ -1,0 +1,870 @@
+{
+	"name": "github-local-actions",
+	"displayName": "GitHub Local Actions",
+	"description": "Run your GitHub Actions locally!",
+	"icon": "icon.png",
+	"author": {
+		"name": "Sanjula Ganepola",
+		"url": "https://github.com/sanjulaganepola"
+	},
+	"publisher": "SanjulaGanepola",
+	"license": "Apache-2.0",
+	"version": "1.2.5",
+	"repository": {
+		"url": "https://github.com/SanjulaGanepola/github-local-actions"
+	},
+	"homepage": "https://sanjulaganepola.github.io/github-local-actions-docs",
+	"bugs": {
+		"url": "https://github.com/SanjulaGanepola/github-local-actions/issues"
+	},
+	"keywords": [
+		"GitHub Actions",
+		"GitHub Actions Workflow",
+		"GitHub Local Actions"
+	],
+	"categories": [
+		"Other"
+	],
+	"extensionDependencies": [
+		"vscode.git"
+	],
+	"engines": {
+		"vscode": "^1.93.0"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	],
+	"main": "./dist/extension.js",
+	"contributes": {
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "github-local-actions-container",
+					"title": "GitHub Local Actions",
+					"icon": "$(robot)"
+				}
+			]
+		},
+		"views": {
+			"github-local-actions-container": [
+				{
+					"id": "components",
+					"name": "Components",
+					"icon": "$(telescope)"
+				},
+				{
+					"id": "workflows",
+					"name": "Workflows",
+					"icon": "$(layers)"
+				},
+				{
+					"id": "history",
+					"name": "History",
+					"icon": "$(book)"
+				},
+				{
+					"id": "settings",
+					"name": "Settings",
+					"icon": "$(gear)"
+				}
+			]
+		},
+		"viewsWelcome": [
+			{
+				"view": "components",
+				"contents": "Loading components...",
+				"when": "!githubLocalActions:noComponents && workspaceFolderCount > 0"
+			},
+			{
+				"view": "components",
+				"contents": "No workspace folder opened",
+				"when": "workspaceFolderCount == 0"
+			},
+			{
+				"view": "components",
+				"contents": "No components found.",
+				"when": "githubLocalActions:noComponents && workspaceFolderCount > 0"
+			},
+			{
+				"view": "workflows",
+				"contents": "Loading workflows...",
+				"when": "!githubLocalActions:noWorkflows && workspaceFolderCount > 0"
+			},
+			{
+				"view": "workflows",
+				"contents": "No workspace folder opened",
+				"when": "workspaceFolderCount == 0"
+			},
+			{
+				"view": "workflows",
+				"contents": "No workflows found.",
+				"when": "githubLocalActions:noWorkflows && workspaceFolderCount > 0"
+			},
+			{
+				"view": "history",
+				"contents": "Loading history...",
+				"when": "!githubLocalActions:noHistory && workspaceFolderCount > 0"
+			},
+			{
+				"view": "history",
+				"contents": "No workspace folder opened",
+				"when": "workspaceFolderCount == 0"
+			},
+			{
+				"view": "history",
+				"contents": "No history found.",
+				"when": "githubLocalActions:noHistory && workspaceFolderCount > 0"
+			},
+			{
+				"view": "settings",
+				"contents": "Loading settings...",
+				"when": "!githubLocalActions:noSettings && workspaceFolderCount > 0"
+			},
+			{
+				"view": "settings",
+				"contents": "No workspace folder opened",
+				"when": "workspaceFolderCount == 0"
+			},
+			{
+				"view": "settings",
+				"contents": "No workflows found.",
+				"when": "githubLocalActions:noSettings && workspaceFolderCount > 0"
+			}
+		],
+		"commands": [
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.refreshComponents",
+				"title": "Refresh",
+				"icon": "$(refresh)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.information",
+				"title": "Information",
+				"icon": "$(info)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.installComponent",
+				"title": "Install",
+				"icon": "$(desktop-download)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.startComponent",
+				"title": "Start",
+				"icon": "$(debug-start)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.fixPermissions",
+				"title": "Fix Permissions",
+				"icon": "$(unlock)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.runAllWorkflows",
+				"title": "Run All Workflows",
+				"enablement": "!githubLocalActions:noWorkflows && workspaceFolderCount > 0",
+				"icon": "$(run-all)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.runEvent",
+				"title": "Run Event",
+				"enablement": "!githubLocalActions:noWorkflows && workspaceFolderCount > 0",
+				"icon": "$(symbol-event)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.refreshWorkflows",
+				"title": "Refresh",
+				"icon": "$(refresh)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.openWorkflow",
+				"title": "Open Workflow",
+				"icon": "$(go-to-file)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.runWorkflow",
+				"title": "Run Workflow",
+				"icon": "$(debug-start)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.runJob",
+				"title": "Run Job",
+				"icon": "$(debug-start)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.clearAll",
+				"title": "Clear All",
+				"enablement": "!githubLocalActions:noHistory && !githubLocalActions:isRunning && !githubLocalActions:noWorkflows && workspaceFolderCount > 0",
+				"icon": "$(clear-all)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.refreshHistory",
+				"title": "Refresh",
+				"icon": "$(refresh)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.viewOutput",
+				"title": "View Output",
+				"icon": "$(book)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.restart",
+				"title": "Restart",
+				"enablement": "viewItem =~ /^githubLocalActions.history_(Success|Failed|Cancelled).*/",
+				"icon": "$(debug-restart)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.stop",
+				"title": "Stop",
+				"enablement": "viewItem =~ /^githubLocalActions.history_(Running).*/",
+				"icon": "$(debug-stop)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.remove",
+				"title": "Remove",
+				"enablement": "viewItem =~ /^githubLocalActions.history_(Success|Failed|Cancelled).*/",
+				"icon": "$(close)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.focusTask",
+				"title": "Focus Task"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.refreshSettings",
+				"title": "Refresh",
+				"icon": "$(refresh)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.createSecretFile",
+				"title": "Create Secret File",
+				"icon": "$(file-add)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.locateSecretFiles",
+				"title": "Locate Secret Files",
+				"icon": "$(search)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.show",
+				"title": "Show",
+				"icon": "$(eye)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.hide",
+				"title": "Hide",
+				"icon": "$(eye-closed)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.enableGithubCLIToken",
+				"title": "Enable GitHub CLI Token",
+				"icon": "$(sync)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.disableGithubCLIToken",
+				"title": "Disable GitHub CLI Token",
+				"icon": "$(sync-ignored)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.createVariableFile",
+				"title": "Create Variable File",
+				"icon": "$(file-add)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.locateVariableFiles",
+				"title": "Locate Variable Files",
+				"icon": "$(search)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.importFromGithub",
+				"title": "Import from GitHub",
+				"icon": "$(github)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.createInputFile",
+				"title": "Create Input File",
+				"icon": "$(file-add)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.locateInputFiles",
+				"title": "Locate Input Files",
+				"icon": "$(search)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.createPayloadFile",
+				"title": "Create Payload File",
+				"icon": "$(file-add)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.locatePayloadFiles",
+				"title": "Locate Payload Files",
+				"icon": "$(search)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.addOption",
+				"title": "Add Option",
+				"icon": "$(add)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.editOption",
+				"title": "Edit",
+				"icon": "$(edit)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.openSettingFile",
+				"title": "Open",
+				"icon": "$(go-to-file)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.removeCustomSetting",
+				"title": "Remove",
+				"icon": "$(close)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.deleteSettingFile",
+				"title": "Delete",
+				"icon": "$(trash)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.editSetting",
+				"title": "Edit",
+				"icon": "$(edit)"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.viewDocumentation",
+				"title": "View Documentation"
+			},
+			{
+				"category": "GitHub Local Actions",
+				"command": "githubLocalActions.reportAnIssue",
+				"title": "Report an Issue"
+			}
+		],
+		"submenus": [
+			{
+				"id": "githubLocalActions.helpAndSupport",
+				"label": "Help and Support",
+				"icon": "$(question)"
+			}
+		],
+		"menus": {
+			"commandPalette": [
+				{
+					"command": "githubLocalActions.refreshComponents",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.information",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.installComponent",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.startComponent",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.fixPermissions",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.runAllWorkflows",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.runEvent",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.refreshWorkflows",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.openWorkflow",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.runWorkflow",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.runJob",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.clearAll",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.refreshHistory",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.viewOutput",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.restart",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.stop",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.remove",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.focusTask",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.refreshSettings",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.createSecretFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.locateSecretFiles",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.show",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.hide",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.enableGithubCLIToken",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.disableGithubCLIToken",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.createVariableFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.locateVariableFiles",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.importFromGithub",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.createInputFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.locateInputFiles",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.createPayloadFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.locatePayloadFiles",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.addOption",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.editOption",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.openSettingFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.removeCustomSetting",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.deleteSettingFile",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.editSetting",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.viewDocumentation",
+					"when": "never"
+				},
+				{
+					"command": "githubLocalActions.reportAnIssue",
+					"when": "never"
+				}
+			],
+			"view/title": [
+				{
+					"command": "githubLocalActions.refreshComponents",
+					"when": "view == components",
+					"group": "navigation@99"
+				},
+				{
+					"command": "githubLocalActions.runAllWorkflows",
+					"when": "view == workflows && workspaceFolderCount <= 1",
+					"group": "navigation@0"
+				},
+				{
+					"command": "githubLocalActions.runEvent",
+					"when": "view == workflows && workspaceFolderCount <= 1",
+					"group": "navigation@1"
+				},
+				{
+					"command": "githubLocalActions.refreshWorkflows",
+					"when": "view == workflows",
+					"group": "navigation@99"
+				},
+				{
+					"command": "githubLocalActions.clearAll",
+					"when": "view == history && workspaceFolderCount <= 1",
+					"group": "navigation@0"
+				},
+				{
+					"command": "githubLocalActions.refreshHistory",
+					"when": "view == history",
+					"group": "navigation@99"
+				},
+				{
+					"command": "githubLocalActions.refreshSettings",
+					"when": "view == settings",
+					"group": "navigation@99"
+				},
+				{
+					"submenu": "githubLocalActions.helpAndSupport",
+					"when": "view =~ /^(components|workflows|history|settings)$/",
+					"group": "navigation@98"
+				}
+			],
+			"githubLocalActions.helpAndSupport": [
+				{
+					"command": "githubLocalActions.viewDocumentation",
+					"group": "0_more@0"
+				},
+				{
+					"command": "githubLocalActions.reportAnIssue",
+					"group": "0_more@1"
+				}
+			],
+			"view/item/context": [
+				{
+					"command": "githubLocalActions.information",
+					"when": "view == components && viewItem =~ /^githubLocalActions.component.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.installComponent",
+					"when": "view == components && viewItem =~ /^githubLocalActions.component_(Not Installed|Not Activated).*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.startComponent",
+					"when": "view == components && viewItem =~ /^githubLocalActions.component_Not Running.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.fixPermissions",
+					"when": "view == components && viewItem =~ /^githubLocalActions.component_Invalid Permissions.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.runAllWorkflows",
+					"when": "view == workflows && viewItem =~ /^githubLocalActions.workspaceFolderWorkflows.*/ && workspaceFolderCount > 1",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.runEvent",
+					"when": "view == workflows && viewItem =~ /^githubLocalActions.workspaceFolderWorkflows.*/ && workspaceFolderCount > 1",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.openWorkflow",
+					"when": "view == workflows && viewItem =~ /^githubLocalActions.workflow.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.runWorkflow",
+					"when": "view == workflows && viewItem =~ /^githubLocalActions.workflow.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.runJob",
+					"when": "view == workflows && viewItem =~ /^githubLocalActions.job.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.clearAll",
+					"when": "view == history && viewItem =~ /^githubLocalActions.workspaceFolderHistory.*/ && workspaceFolderCount > 1",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.viewOutput",
+					"when": "view == history && viewItem =~ /^githubLocalActions.history.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.restart",
+					"when": "view == history && viewItem =~ /^githubLocalActions.history.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.stop",
+					"when": "view == history && viewItem =~ /^githubLocalActions.history.*/",
+					"group": "inline@2"
+				},
+				{
+					"command": "githubLocalActions.remove",
+					"when": "view == history && viewItem =~ /^githubLocalActions.history.*/",
+					"group": "inline@3"
+				},
+				{
+					"command": "githubLocalActions.focusTask",
+					"when": "view == history && viewItem =~ /^githubLocalActions.history.*/",
+					"group": "0_focus@0"
+				},
+				{
+					"command": "githubLocalActions.createSecretFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secrets.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.locateSecretFiles",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secrets.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.show",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secret(?!s)_hide(?!_generate).*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.hide",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secret(?!s)_show(?!_generate).*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.enableGithubCLIToken",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secret(?!s).*_manual.*/",
+					"group": "inline@2"
+				},
+				{
+					"command": "githubLocalActions.disableGithubCLIToken",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.secret(?!s).*_generate.*/",
+					"group": "inline@2"
+				},
+				{
+					"command": "githubLocalActions.createVariableFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.variables.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.locateVariableFiles",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.variables.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.importFromGithub",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.variables.*/",
+					"group": "inline@2"
+				},
+				{
+					"command": "githubLocalActions.createInputFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.inputs.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.locateInputFiles",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.inputs.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.createPayloadFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.payloads.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.locatePayloadFiles",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.payloads.*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.addOption",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.options.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.editOption",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.option(?!s)_editable.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.openSettingFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.(secret|variable|input|payload)File.*/",
+					"group": "inline@0"
+				},
+				{
+					"command": "githubLocalActions.removeCustomSetting",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.((secret|variable|input|payload)File|option(?!s)).*/",
+					"group": "inline@1"
+				},
+				{
+					"command": "githubLocalActions.deleteSettingFile",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.(secret|variable|input|payload)File.*/",
+					"group": "inline@2"
+				},
+				{
+					"command": "githubLocalActions.editSetting",
+					"when": "view == settings && viewItem =~ /^githubLocalActions.(secret|variable|input|runner)(?!(File|s))(?!_(show|hide)_generate).*/",
+					"group": "inline@1"
+				}
+			]
+		},
+		"configuration": {
+			"title": "GitHub Local Actions",
+			"properties": {
+				"githubLocalActions.actCommand": {
+					"markdownDescription": "The base `nektos/act` command to be called. By default, this will be `act` (requires the binary to be on your `PATH`). If the binary is not on your `PATH`, the command should be fully qualified. If `act` is installed as a GitHub CLI extension, this command should be set to `gh act`.",
+					"type": "string",
+					"default": "act"
+				},
+				"githubLocalActions.workflowsDirectory": {
+					"markdownDescription": "The relative path to the directory containing your workflows. By default, this will be `.github/workflows`.",
+					"type": "string",
+					"default": ".github/workflows"
+				},
+				"githubLocalActions.dockerDesktopPath": {
+					"markdownDescription": "The path to your Docker Desktop executable (used for Windows and MacOS). To start Docker Engine from the `Components` view, this application will be launched. Refer to the default path based on OS:\n\n* **Windows**: `C:/Program Files/Docker/Docker/Docker Desktop.exe`\n\n* **MacOS**: `/Applications/Docker.app`",
+					"type": "string",
+					"default": ""
+				}
+			}
+		},
+		"colors": [
+			{
+				"id": "GitHubLocalActions.green",
+				"description": "Color for green in the GitHub Local Actions extension",
+				"defaults": {
+					"dark": "#89d185",
+					"light": "#89d185"
+				}
+			},
+			{
+				"id": "GitHubLocalActions.red",
+				"description": "Color for red in the GitHub Local Actions extension",
+				"defaults": {
+					"dark": "#f48771",
+					"light": "#f48771"
+				}
+			},
+			{
+				"id": "GitHubLocalActions.yellow",
+				"description": "Color for yellow in the GitHub Local Actions extension",
+				"defaults": {
+					"dark": "#cca700",
+					"light": "#cca700"
+				}
+			},
+			{
+				"id": "GitHubLocalActions.grey",
+				"description": "Color for grey in the GitHub Local Actions extension",
+				"defaults": {
+					"dark": "#808080",
+					"light": "#808080"
+				}
+			},
+			{
+				"id": "GitHubLocalActions.purple",
+				"description": "Color for purple in the GitHub Local Actions extension",
+				"defaults": {
+					"dark": "#d6bcfa",
+					"light": "#d6bcfa"
+				}
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run package",
+		"compile": "webpack",
+		"watch": "webpack --watch",
+		"package": "webpack --mode production --devtool hidden-source-map",
+		"compile-tests": "tsc -p . --outDir out",
+		"watch-tests": "tsc -p . -w --outDir out",
+		"pretest": "npm run compile-tests && npm run compile && npm run lint",
+		"lint": "eslint src",
+		"test": "vscode-test"
+	},
+	"dependencies": {
+		"child_process": "^1.0.2",
+		"octokit": "^4.0.2",
+		"sanitize-filename": "^1.6.3",
+		"yaml": "^2.6.0"
+	},
+	"devDependencies": {
+		"@types/node": "22.x",
+		"@types/vscode": "^1.93.0",
+		"@typescript-eslint/eslint-plugin": "^8.14.0",
+		"@typescript-eslint/parser": "^8.14.0",
+		"eslint": "^9.15.0",
+		"ts-loader": "^9.5.1",
+		"typescript": "^5.6.3",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4"
+	},
+	"__metadata": {
+		"installedTimestamp": 1745658152741,
+		"targetPlatform": "universal",
+		"size": 496615
+	}
+}

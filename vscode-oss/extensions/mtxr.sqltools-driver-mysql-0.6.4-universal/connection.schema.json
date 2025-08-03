@@ -1,0 +1,247 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "definitions": {
+    "database": {
+      "title": "Database",
+      "type": "string",
+      "minLength": 1
+    },
+    "username": {
+      "title": "Username",
+      "type": "string",
+      "minLength": 1
+    },
+    "usePassword": {
+      "title": "Password mode",
+      "type": "string",
+      "enum": [
+        "SQLTools Driver Credentials",
+        "Ask on connect",
+        "Use empty password",
+        "Save as plaintext in settings"
+      ],
+      "default": "SQLTools Driver Credentials"
+    },
+    "password": {
+      "title": "Password",
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "properties": {
+    "connectionMethod": {
+      "title": "Connect using",
+      "type": "string",
+      "minLength": 1,
+      "enum": [
+        "Server and Port",
+        "Socket File",
+        "Connection String"
+      ],
+      "default": "Server and Port"
+    },
+    "mysqlOptions": {
+      "title": "MySQL driver specific options",
+      "type": "object",
+      "properties": {
+        "authProtocol": {
+          "type": "string",
+          "enum": ["default", "xprotocol"],
+          "default": "default",
+          "title": "Authentication Protocol"
+        },
+        "enableSsl": {
+          "type": "string",
+          "title": "SSL",
+          "enum": ["Enabled", "Disabled"],
+          "default": "Disabled"
+        }
+      },
+      "dependencies": {
+        "enableSsl" : {
+          "oneOf": [
+            {
+              "properties": {
+                "enableSsl": {
+                  "enum": ["Disabled"]
+                }
+              }
+            },
+            {
+              "properties": {
+                "enableSsl": {
+                  "enum": ["Enabled"]
+                },
+                "ssl": {
+                  "type": "object",
+                  "title": "SSL Options (node.TLSSocket)",
+                  "description": "Passed directly to node.TLSSocket. Check more here: https://nodejs.org/api/tls.html#tls_new_tls_tlssocket_socket_options",
+                  "properties": {
+                    "ca": {
+                      "type": "string",
+                      "title": "Certificate Authority (CA) Certificate File"
+                    },
+                    "cert": {
+                      "type": "string",
+                      "title": "Server Public Key Certificate File"
+                    },
+                    "key": {
+                      "type": "string",
+                      "title": "Server Private Key Certificate File"
+                    },
+                    "crl": {
+                      "type": "string",
+                      "title": "Certificate Revocation Lists File"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "connectionTimeout": {
+      "title": "Connection Timeout",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "dependencies": {
+    "connectionMethod": {
+      "oneOf": [
+        {
+          "properties": {
+            "connectionMethod": {
+              "enum": [
+                "Server and Port"
+              ]
+            },
+            "server": {
+              "title": "Server Address",
+              "type": "string",
+              "minLength": 1,
+              "default": "localhost"
+            },
+            "port": {
+              "title": "Port",
+              "minimum": 1,
+              "default": 3306,
+              "type": "integer"
+            },
+            "database": {
+              "$ref": "#/definitions/database"
+          },
+            "username": {
+              "$ref": "#/definitions/username"
+            },
+            "usePassword": {
+              "$ref": "#/definitions/usePassword"
+            }
+        },
+          "required": [
+            "server",
+            "port",
+            "database",
+            "username"
+          ]
+        },
+        {
+          "properties": {
+            "connectionMethod": {
+              "enum": [
+                "Socket File"
+              ]
+            },
+            "socketPath": {
+              "title": "Socket file path",
+              "type": "string",
+              "minLength": 1
+            },
+            "database": {
+              "$ref": "#/definitions/database"
+          },
+            "username": {
+              "$ref": "#/definitions/username"
+            },
+            "usePassword": {
+              "$ref": "#/definitions/usePassword"
+            }
+        },
+          "required": [
+            "socketPath",
+            "database",
+            "username"
+          ]
+        },
+        {
+          "properties": {
+            "connectionMethod": {
+              "enum": [
+                "Connection String"
+              ]
+            },
+            "connectString": {
+              "title": "Connection String",
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "connectString"
+          ]
+        }
+      ]
+    },
+    "usePassword": {
+      "oneOf": [
+        {
+          "properties": {
+            "usePassword": {
+              "enum": [
+                "Ask on connect"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "usePassword": {
+              "enum": [
+                "Use empty password"
+              ]
+            }
+          }
+        },
+        {
+          "properties": {
+            "usePassword": {
+              "enum": [
+                "Save as plaintext in settings"
+              ]
+            },
+            "password": {
+              "$ref": "#/definitions/password"
+            }
+          },
+          "required": [
+            "password"
+          ]
+        },
+        {
+          "properties": {
+            "usePassword": {
+              "enum": [
+                "SQLTools Driver Credentials"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  },
+  "required": [
+    "connectionMethod"
+  ]
+}

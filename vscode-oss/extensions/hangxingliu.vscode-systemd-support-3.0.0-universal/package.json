@@ -1,0 +1,266 @@
+{
+	"name": "vscode-systemd-support",
+	"displayName": "Systemd Helper",
+	"description": "A Visual Studio Code extension that helps you read and write Systemd unit/mkosi config/Podman Quadlet files",
+	"icon": "out/assets/icon.png",
+	"main": "out/index.js",
+	"browser": "out/index.js",
+	"version": "3.0.0",
+	"preview": false,
+	"publisher": "hangxingliu",
+	"author": "hangxingliu",
+	"license": "MIT",
+	"packageManager": "yarn@4.6.0",
+	"engines": {
+		"vscode": "^1.64.0",
+		"node": "^16.9 || >=18.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"keywords": [
+		"Linux",
+		"Systemd",
+		"Configurations"
+	],
+	"extensionKind": [
+		"workspace",
+		"ui"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		},
+		"virtualWorkspaces": true
+	},
+	"scripts": {
+		"build": "node scripts/run clean build:webpack copy:assets",
+		"build:dev": "node scripts/run build:ts build:pkgjson build:syntax",
+		"build:pkgjson": "node --enable-source-maps out/build-contributes",
+		"build:syntax": "node --enable-source-maps out/syntax/generate-tmLanguage",
+		"build:ts": "swc -d out src --strip-leading-paths --copy-files",
+		"build:vsix": "node scripts/run build && ./scripts/vsce.sh build-vsix-and-list",
+		"build:webpack": "webpack --mode production --devtool hidden-source-map",
+		"copy:assets": "cd src && copyfiles '**/*.{tmLanguage,png}' ../out",
+		"fetch:base": "node --enable-source-maps out/hint-data/fetch/systemd-all",
+		"fetch:mkosi": "node --enable-source-maps out/hint-data/fetch/mkosi",
+		"fetch:podman": "node --enable-source-maps out/hint-data/fetch/podman-quadlet",
+		"fetch:capabilities": "node --enable-source-maps out/hint-data/fetch/linux-capabilities",
+		"fetch:syscalls": "node --enable-source-maps out/hint-data/fetch/linux-syscalls",
+		"test:tsc": "tsc --project tsconfig.json --outDir .tsc",
+		"test:specs": "./scripts/run-spec-tests.sh",
+		"test": "node scripts/run test:tsc test:specs",
+		"lint": "eslint src",
+		"clean": "rimraf out .tsc"
+	},
+	"activationEvents": [
+		"onLanguage:systemd-conf"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "mkosi-conf",
+				"aliases": [
+					"Mkosi Configuration",
+					"mkosi.conf"
+				],
+				"filenamePatterns": [
+					"mkosi.conf"
+				],
+				"configuration": "./language-configuration.json"
+			},
+			{
+				"id": "systemd-conf",
+				"aliases": [
+					"Systemd Configuration",
+					"systemd-conf",
+					"systemd-unit-file"
+				],
+				"firstLine": "^\\[(Unit|Install)\\]",
+				"filenamePatterns": [
+					"**/systemd/*.conf",
+					"**/systemd/*.conf.d/*.conf",
+					"**/*.{service,slice,scope}.d/*.conf",
+					"**/{repart,sysupdate}.d/*.conf",
+					"**/sysupdate.d/*.feature"
+				],
+				"extensions": [
+					".container",
+					".volume",
+					".kube",
+					".image",
+					".pod",
+					".build",
+					".link",
+					".dnssd",
+					".netdev",
+					".network",
+					".nspawn",
+					".service",
+					".service.in",
+					".socket",
+					".device",
+					".mount",
+					".automount",
+					".swap",
+					".target",
+					".path",
+					".timer",
+					".snapshot",
+					".slice",
+					".scope"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "systemd-conf",
+				"scopeName": "source.systemd",
+				"path": "./out/syntax/systemd.tmLanguage"
+			},
+			{
+				"language": "mkosi-conf",
+				"scopeName": "source.mkosi",
+				"path": "./out/syntax/mkosi.tmLanguage"
+			}
+		],
+		"commands": [
+			{
+				"command": "systemd.changeUnitFileType",
+				"category": "Systemd",
+				"title": "Change the type of the current unit file"
+			}
+		],
+		"configuration": [
+			{
+				"title": "Systemd",
+				"properties": {
+					"systemd.version": {
+						"title": "Systemd version",
+						"type": [
+							"number",
+							"string"
+						],
+						"default": 257,
+						"examples": [
+							256,
+							"v257",
+							"latest"
+						],
+						"scope": "machine-overridable",
+						"markdownDescription": "By adjusting this configuration, the extension will exclusively offer directive/option completions that are compatible with this version.\n\nThis configuration impacts auto-completion and linting features, but **it doesn'taffect syntax highlighting**.\n\nThis configuration accepts various types of version strings or version number and a special value: `\"latest\"`. And you can determine the version of systemd installed on your OS by running the command: `systemctl --version`.   \nHere are some sample values that this configuration accepts:\n\n- `latest`\n- `255`, `\"255\"`, `\"v255\"`\n- `\"252.22-1~deb12u1\"`, `\"255.4-1\"`\n- `\"255.4-1ubuntu4\"`\n"
+					},
+					"systemd.podman.completion": {
+						"title": "Enable auto completion related to Podman Quadlet",
+						"type": "boolean",
+						"default": true,
+						"markdownDescription": "Setting this configuration to `false` can remove ambiguous auto-completion items related to [Podman Quadlet](https://docs.podman.io/en/latest/markdown/podman-systemd.unit.5.html).   \nIt is useful **if you don't work with Podman Quadlet**.\n\nYou can still manually change the unit type to Podman-related types and get auto completion in some unambiguous Podman unit files (e.g., *.container) even if this configuration is set to `false`.   \nMoreover, this configuration would not affect the syntax highlighting for Podman unit files and documentation for Podman related directives/options."
+					},
+					"systemd.style.boolean": {
+						"title": "Set default boolean value style",
+						"type": "string",
+						"enum": [
+							"yes-no",
+							"true-false",
+							"on-off",
+							"1-0"
+						],
+						"default": "yes-no",
+						"description": "This configuration affects how boolean values are auto-completed"
+					},
+					"systemd.directive-keys.lint": {
+						"title": "Enable lint(checker) feature for directive keys",
+						"type": "boolean",
+						"default": true,
+						"description": "Give you warnings if any directive keys don't exist in the systemd"
+					},
+					"systemd.directive-keys.custom": {
+						"title": "Custom directive keys",
+						"type": "array",
+						"default": [
+							"/^[A-Z_]+$/"
+						],
+						"examples": [
+							[
+								"/^[A-Z_]+$/"
+							],
+							[
+								"custom-key"
+							]
+						],
+						"description": "An array contains case-sensitive strings or regex expressions. The extension will add them to the completion list and lint."
+					},
+					"systemd.lintDirectiveKeys": {
+						"title": "Enable lint(checker) feature for directive keys",
+						"type": "boolean",
+						"default": true,
+						"markdownDeprecationMessage": "This config was renamed to `directive-keys.lint`. It will be removed in early 2025"
+					},
+					"systemd.customDirectiveKeys": {
+						"title": "Custom directive keys",
+						"type": "array",
+						"default": [
+							"/^[A-Z_]+$/"
+						],
+						"examples": [
+							[
+								"/^[A-Z_]+$/"
+							],
+							[
+								"custom-key"
+							]
+						],
+						"markdownDeprecationMessage": "This config was renamed to `directive-keys.custom`. It will be removed in early 2025"
+					}
+				}
+			}
+		]
+	},
+	"vsce": {
+		"dependencies": false,
+		"yarn": false
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.5.2",
+		"@swc/core": "^1.10.6",
+		"@types/node": "^22.10.5",
+		"@types/turndown": "^5.0.5",
+		"@types/vscode": "^1.64.0",
+		"axios": "^1.7.9",
+		"cheerio": "^1.0.0",
+		"copyfiles": "^2.4.1",
+		"escape-html": "^1.0.3",
+		"html-entities": "^2.5.2",
+		"https-proxy-agent": "^7.0.6",
+		"marked": "^15.0.6",
+		"rimraf": "^6.0.1",
+		"swc-loader": "^0.2.6",
+		"turndown": "^7.2.0",
+		"turndown-plugin-gfm": "^1.0.2",
+		"typescript": "^5.7.2",
+		"webpack": "^5.97.1",
+		"webpack-cli": "^6.0.1"
+	},
+	"optionalDependencies": {
+		"@eslint/js": "^9.17.0",
+		"@vscode/vsce": "^3.2.1",
+		"eslint": "^9.17.0",
+		"ovsx": "^0.10.1",
+		"typescript-eslint": "^8.19.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hangxingliu/vscode-systemd"
+	},
+	"bugs": {
+		"url": "https://github.com/hangxingliu/vscode-systemd/issues"
+	},
+	"homepage": "https://github.com/hangxingliu/vscode-systemd",
+	"__metadata": {
+		"installedTimestamp": 1745658105986,
+		"targetPlatform": "universal",
+		"size": 2501759
+	}
+}
