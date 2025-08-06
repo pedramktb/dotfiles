@@ -2,6 +2,7 @@ PATH="$HOME/go/bin:$PATH"
 
 _darwin_profile() {
   alias code=codium
+  export CLICOLOR=1
   PATH="/opt/homebrew/bin:$PATH"
 }
 
