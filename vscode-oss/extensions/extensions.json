@@ -242,12 +242,12 @@
     },
     {
         "identifier": {
-            "id": "github.vscode-github-actions",
-            "uuid": "04f49bfc-8330-4eee-8237-ea938fb755ef"
+            "id": "github.vscode-github-actions"
         },
         "version": "0.27.2",
         "location": {
             "$mid": 1,
+            "fsPath": "~/.vscode-oss/extensions/github.vscode-github-actions-0.27.2-universal",
             "path": "~/.vscode-oss/extensions/github.vscode-github-actions-0.27.2-universal",
             "scheme": "file"
         },
@@ -744,7 +744,38 @@
     },
     {
         "identifier": {
-            "id": "jeanp413.open-remote-ssh"
+            "id": "continue.continue",
+            "uuid": "c8d442ab-9ee3-4891-a5b0-994f14f54c94"
+        },
+        "version": "1.0.23",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/continue.continue-1.0.23-darwin-arm64",
+            "scheme": "file"
+        },
+        "relativeLocation": "continue.continue-1.0.23-darwin-arm64",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1755356526111,
+            "pinned": false,
+            "source": "gallery",
+            "id": "c8d442ab-9ee3-4891-a5b0-994f14f54c94",
+            "publisherId": "8701b9ff-bc1c-483c-b95d-ac0ba7d51a0b",
+            "publisherDisplayName": "Continue",
+            "targetPlatform": "darwin-arm64",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "jeanp413.open-remote-ssh",
+            "uuid": "9fc16cea-08e2-4ae5-bf75-224004d722ff"
         },
         "version": "0.0.49",
         "location": {
