@@ -1,1 +1,771 @@
-[{"identifier":{"id":"hangxingliu.vscode-systemd-support","uuid":"422d9344-2afe-4ddb-8b9d-f21339087d60"},"version":"3.0.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/hangxingliu.vscode-systemd-support-3.0.0-universal","scheme":"file"},"relativeLocation":"hangxingliu.vscode-systemd-support-3.0.0-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"422d9344-2afe-4ddb-8b9d-f21339087d60","publisherId":"43f8445f-f00e-4e08-ab0f-21e398616231","publisherDisplayName":"hangxingliu","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"sanjulaganepola.github-local-actions","uuid":"4a2d7bb5-c18c-468d-8090-606f0568d535"},"version":"1.2.5","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/sanjulaganepola.github-local-actions-1.2.5-universal","scheme":"file"},"relativeLocation":"sanjulaganepola.github-local-actions-1.2.5-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"4a2d7bb5-c18c-468d-8090-606f0568d535","publisherId":"b607163c-aa69-4e2b-a394-4949b88e1e53","publisherDisplayName":"SanjulaGanepola","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"github.github-vscode-theme","uuid":"7328a705-91fc-49e6-8293-da6f112e482d"},"version":"6.3.5","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/github.github-vscode-theme-6.3.5-universal","scheme":"file"},"relativeLocation":"github.github-vscode-theme-6.3.5-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"7328a705-91fc-49e6-8293-da6f112e482d","publisherId":"7c1c19cd-78eb-4dfb-8999-99caf7679002","publisherDisplayName":"GitHub","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"jeanp413.open-remote-ssh","uuid":"9fc16cea-08e2-4ae5-bf75-224004d722ff"},"version":"0.0.49","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/jeanp413.open-remote-ssh-0.0.49-universal","scheme":"file"},"relativeLocation":"jeanp413.open-remote-ssh-0.0.49-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"9fc16cea-08e2-4ae5-bf75-224004d722ff","publisherId":"82e59b79-acc5-4a5b-81cb-9303cbdc05cb","publisherDisplayName":"jeanp413","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"mtxr.sqltools","uuid":"6a2bbab0-d8f0-43fa-9b26-e6a3b7892a0b"},"version":"0.28.4","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/mtxr.sqltools-0.28.4-universal","scheme":"file"},"relativeLocation":"mtxr.sqltools-0.28.4-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"6a2bbab0-d8f0-43fa-9b26-e6a3b7892a0b","publisherId":"952fc94a-735a-4caa-92ce-e1011fbc9780","publisherDisplayName":"mtxr","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"mtxr.sqltools-driver-pg","uuid":"ff850146-c38e-4afe-8a34-705074ae16e2"},"version":"0.5.5","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/mtxr.sqltools-driver-pg-0.5.5-universal","scheme":"file"},"relativeLocation":"mtxr.sqltools-driver-pg-0.5.5-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"ff850146-c38e-4afe-8a34-705074ae16e2","publisherId":"952fc94a-735a-4caa-92ce-e1011fbc9780","publisherDisplayName":"mtxr","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"mtxr.sqltools-driver-mysql","uuid":"45e19ef7-c10a-44ce-8413-0d9edfbbdcaa"},"version":"0.6.4","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/mtxr.sqltools-driver-mysql-0.6.4-universal","scheme":"file"},"relativeLocation":"mtxr.sqltools-driver-mysql-0.6.4-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"45e19ef7-c10a-44ce-8413-0d9edfbbdcaa","publisherId":"952fc94a-735a-4caa-92ce-e1011fbc9780","publisherDisplayName":"mtxr","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"hurly.sqltools-oracle-driver","uuid":"7cfc984f-111f-4bef-bf25-bfbc58096c87"},"version":"0.1.14","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/hurly.sqltools-oracle-driver-0.1.14-universal","scheme":"file"},"relativeLocation":"hurly.sqltools-oracle-driver-0.1.14-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"7cfc984f-111f-4bef-bf25-bfbc58096c87","publisherId":"e28a36f4-ad8c-459c-b465-08f28d8d7427","publisherDisplayName":"hurly","targetPlatform":"universal","updated":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"gera2ld.markmap-vscode","uuid":"2392d4a0-3976-49ea-af95-7001abb8c75a"},"version":"0.2.11","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/gera2ld.markmap-vscode-0.2.11-universal","scheme":"file"},"relativeLocation":"gera2ld.markmap-vscode-0.2.11-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"2392d4a0-3976-49ea-af95-7001abb8c75a","publisherId":"4e3f72cb-a32e-4f0b-bd61-4f5f85efe190","publisherDisplayName":"gera2ld","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"golang.go","uuid":"d6f6cfea-4b6f-41f4-b571-6ad2ab7918da"},"version":"0.48.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/golang.go-0.48.0-universal","scheme":"file"},"relativeLocation":"golang.go-0.48.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"d6f6cfea-4b6f-41f4-b571-6ad2ab7918da","publisherId":"dbf6ae0a-da75-4167-ac8b-75b4512f2153","publisherDisplayName":"golang","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"github.vscode-github-actions","uuid":"04f49bfc-8330-4eee-8237-ea938fb755ef"},"version":"0.27.2","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/github.vscode-github-actions-0.27.2-universal","scheme":"file"},"relativeLocation":"github.vscode-github-actions-0.27.2-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"04f49bfc-8330-4eee-8237-ea938fb755ef","publisherId":"7c1c19cd-78eb-4dfb-8999-99caf7679002","publisherDisplayName":"GitHub","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"mongodb.mongodb-vscode","uuid":"4b6540da-bfa3-4b88-b9e3-df8f2d161124"},"version":"1.13.3","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/mongodb.mongodb-vscode-1.13.3-universal","scheme":"file"},"relativeLocation":"mongodb.mongodb-vscode-1.13.3-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"4b6540da-bfa3-4b88-b9e3-df8f2d161124","publisherId":"96be5892-f133-40ba-88dd-d450cff649f0","publisherDisplayName":"mongodb","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"ms-azuretools.vscode-containers","uuid":"2cd1d691-3d69-4d2d-ae39-fda4bc4cfd3d"},"version":"2.1.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/ms-azuretools.vscode-containers-2.1.0-universal","scheme":"file"},"relativeLocation":"ms-azuretools.vscode-containers-2.1.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"2cd1d691-3d69-4d2d-ae39-fda4bc4cfd3d","publisherId":"52b787f2-79a9-4f32-99b4-393afe3005d3","publisherDisplayName":"ms-azuretools","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"dart-code.flutter","uuid":"f6c3ec04-6057-4d9c-b997-69cba07a6158"},"version":"3.116.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/dart-code.flutter-3.116.0-universal","scheme":"file"},"relativeLocation":"dart-code.flutter-3.116.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"f6c3ec04-6057-4d9c-b997-69cba07a6158","publisherId":"a606ecbb-a8fb-4c35-b29a-5e8842d82af2","publisherDisplayName":"Dart-Code","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"dart-code.dart-code","uuid":"f57f68ea-9ee8-42b5-9a97-041d3e4278c4"},"version":"3.116.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/dart-code.dart-code-3.116.0-universal","scheme":"file"},"relativeLocation":"dart-code.dart-code-3.116.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"f57f68ea-9ee8-42b5-9a97-041d3e4278c4","publisherId":"a606ecbb-a8fb-4c35-b29a-5e8842d82af2","publisherDisplayName":"Dart-Code","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"mtxr.sqltools-driver-sqlite","uuid":"5862e2aa-ace9-476d-8b10-3b72fa494604"},"version":"0.5.2","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/mtxr.sqltools-driver-sqlite-0.5.2-universal","scheme":"file"},"relativeLocation":"mtxr.sqltools-driver-sqlite-0.5.2-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"5862e2aa-ace9-476d-8b10-3b72fa494604","publisherId":"952fc94a-735a-4caa-92ce-e1011fbc9780","publisherDisplayName":"mtxr","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"task.vscode-task","uuid":"09e56a5f-d2c3-4637-966e-0b8e20f20d2e"},"version":"0.3.2","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/task.vscode-task-0.3.2-universal","scheme":"file"},"relativeLocation":"task.vscode-task-0.3.2-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"09e56a5f-d2c3-4637-966e-0b8e20f20d2e","publisherId":"e3844bff-50e2-44ca-9bb0-a71932d17ba9","publisherDisplayName":"Task","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"isApplicationScoped":false}},{"identifier":{"id":"christopherhx.azure-pipelines-vscode-ext","uuid":"79dd0390-1c94-4208-893d-acad3af29820"},"version":"0.2.13","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/christopherhx.azure-pipelines-vscode-ext-0.2.13-universal","scheme":"file"},"relativeLocation":"christopherhx.azure-pipelines-vscode-ext-0.2.13-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"79dd0390-1c94-4208-893d-acad3af29820","publisherId":"f09d0363-f7c3-41df-837f-4e15a39b8a8d","publisherDisplayName":"christopherhx","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"redhat.vscode-yaml","uuid":"2061917f-f76a-458a-8da9-f162de22b97e"},"version":"1.18.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/redhat.vscode-yaml-1.18.0-universal","scheme":"file"},"relativeLocation":"redhat.vscode-yaml-1.18.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"2061917f-f76a-458a-8da9-f162de22b97e","publisherId":"eed56242-9699-4317-8bc7-e9f4b9bdd3ff","publisherDisplayName":"Red Hat","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"ms-kubernetes-tools.vscode-kubernetes-tools","uuid":"4837e4f3-1b01-4732-b1a6-daa57ef64cab"},"version":"1.3.25","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/ms-kubernetes-tools.vscode-kubernetes-tools-1.3.25-universal","scheme":"file"},"relativeLocation":"ms-kubernetes-tools.vscode-kubernetes-tools-1.3.25-universal","metadata":{"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"4837e4f3-1b01-4732-b1a6-daa57ef64cab","publisherId":"d5b943eb-b968-4c2d-b241-a117ce9c3961","publisherDisplayName":"ms-kubernetes-tools","targetPlatform":"universal","updated":false,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false}},{"identifier":{"id":"redocly.openapi-vs-code","uuid":"43ac9139-82a5-4580-856a-71792a204014"},"version":"0.7.1","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/redocly.openapi-vs-code-0.7.1-universal","scheme":"file"},"relativeLocation":"redocly.openapi-vs-code-0.7.1-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"43ac9139-82a5-4580-856a-71792a204014","publisherId":"6afdf53e-62e5-438d-b497-c469c347c154","publisherDisplayName":"Redocly","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"vue.volar","uuid":"a95ee795-1576-4ffa-acda-8d6e6a95c584"},"version":"3.0.5","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/vue.volar-3.0.5-universal","scheme":"file"},"relativeLocation":"vue.volar-3.0.5-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754220778,"pinned":false,"source":"gallery","id":"a95ee795-1576-4ffa-acda-8d6e6a95c584","publisherId":"49983e2f-38ad-4441-beea-d678b53d0549","publisherDisplayName":"Vue","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"gitlab.gitlab-workflow","uuid":"01826860-d71c-4734-9cf8-dc1c07baa5f9"},"version":"6.36.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/gitlab.gitlab-workflow-6.36.0-universal","scheme":"file"},"relativeLocation":"gitlab.gitlab-workflow-6.36.0-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754549422553,"pinned":false,"source":"gallery","id":"01826860-d71c-4734-9cf8-dc1c07baa5f9","publisherId":"11e0db43-01fa-42a2-aa75-d40835a05df7","publisherDisplayName":"GitLab","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"eamodio.gitlens","uuid":"4de763bd-505d-4978-9575-2b7696ecf94e"},"version":"17.3.4","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/eamodio.gitlens-17.3.4-universal","scheme":"file"},"relativeLocation":"eamodio.gitlens-17.3.4-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754982711299,"pinned":false,"source":"gallery","id":"4de763bd-505d-4978-9575-2b7696ecf94e","publisherId":"678d198b-9b2e-49d3-96ff-6d801c9575df","publisherDisplayName":"GitKraken","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"github.copilot"},"version":"1.354.1728","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/github.copilot-1.354.1728","scheme":"file"},"relativeLocation":"github.copilot-1.354.1728","metadata":{"installedTimestamp":1754986312160,"pinned":true,"source":"vsix"}},{"identifier":{"id":"github.copilot-chat"},"version":"0.30.0","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/github.copilot-chat-0.30.0","scheme":"file"},"relativeLocation":"github.copilot-chat-0.30.0","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1754987067784,"pinned":true,"source":"vsix"}},{"identifier":{"id":"github.vscode-pull-request-github","uuid":"69ddd764-339a-4ecc-97c1-9c4ece58e36d"},"version":"0.116.1","location":{"$mid":1,"path":"/Users/katebikousha/.vscode-oss/extensions/github.vscode-pull-request-github-0.116.1-universal","scheme":"file"},"relativeLocation":"github.vscode-pull-request-github-0.116.1-universal","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1755069961382,"pinned":false,"source":"gallery","id":"69ddd764-339a-4ecc-97c1-9c4ece58e36d","publisherId":"7c1c19cd-78eb-4dfb-8999-99caf7679002","publisherDisplayName":"GitHub","targetPlatform":"universal","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}},{"identifier":{"id":"continue.continue"},"version":"1.0.23","location":{"$mid":1,"fsPath":"/Users/katebikousha/.vscode-oss/extensions/continue.continue-1.0.23-darwin-arm64","external":"file:///Users/katebikousha/.vscode-oss/extensions/continue.continue-1.0.23-darwin-arm64","path":"/Users/katebikousha/.vscode-oss/extensions/continue.continue-1.0.23-darwin-arm64","scheme":"file"},"relativeLocation":"continue.continue-1.0.23-darwin-arm64","metadata":{"isApplicationScoped":false,"isMachineScoped":false,"isBuiltin":false,"installedTimestamp":1755353710812,"pinned":false,"source":"gallery","id":"c8d442ab-9ee3-4891-a5b0-994f14f54c94","publisherId":"8701b9ff-bc1c-483c-b95d-ac0ba7d51a0b","publisherDisplayName":"Continue","targetPlatform":"darwin-arm64","updated":true,"private":false,"isPreReleaseVersion":false,"hasPreReleaseVersion":false,"preRelease":false}}]
+[
+    {
+        "identifier": {
+            "id": "hangxingliu.vscode-systemd-support",
+            "uuid": "422d9344-2afe-4ddb-8b9d-f21339087d60"
+        },
+        "version": "3.0.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/hangxingliu.vscode-systemd-support-3.0.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "hangxingliu.vscode-systemd-support-3.0.0-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "422d9344-2afe-4ddb-8b9d-f21339087d60",
+            "publisherId": "43f8445f-f00e-4e08-ab0f-21e398616231",
+            "publisherDisplayName": "hangxingliu",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "sanjulaganepola.github-local-actions",
+            "uuid": "4a2d7bb5-c18c-468d-8090-606f0568d535"
+        },
+        "version": "1.2.5",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/sanjulaganepola.github-local-actions-1.2.5-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "sanjulaganepola.github-local-actions-1.2.5-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "4a2d7bb5-c18c-468d-8090-606f0568d535",
+            "publisherId": "b607163c-aa69-4e2b-a394-4949b88e1e53",
+            "publisherDisplayName": "SanjulaGanepola",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.github-vscode-theme",
+            "uuid": "7328a705-91fc-49e6-8293-da6f112e482d"
+        },
+        "version": "6.3.5",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/github.github-vscode-theme-6.3.5-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.github-vscode-theme-6.3.5-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "7328a705-91fc-49e6-8293-da6f112e482d",
+            "publisherId": "7c1c19cd-78eb-4dfb-8999-99caf7679002",
+            "publisherDisplayName": "GitHub",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "mtxr.sqltools",
+            "uuid": "6a2bbab0-d8f0-43fa-9b26-e6a3b7892a0b"
+        },
+        "version": "0.28.4",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/mtxr.sqltools-0.28.4-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "mtxr.sqltools-0.28.4-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "6a2bbab0-d8f0-43fa-9b26-e6a3b7892a0b",
+            "publisherId": "952fc94a-735a-4caa-92ce-e1011fbc9780",
+            "publisherDisplayName": "mtxr",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "mtxr.sqltools-driver-pg",
+            "uuid": "ff850146-c38e-4afe-8a34-705074ae16e2"
+        },
+        "version": "0.5.5",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/mtxr.sqltools-driver-pg-0.5.5-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "mtxr.sqltools-driver-pg-0.5.5-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "ff850146-c38e-4afe-8a34-705074ae16e2",
+            "publisherId": "952fc94a-735a-4caa-92ce-e1011fbc9780",
+            "publisherDisplayName": "mtxr",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "mtxr.sqltools-driver-mysql",
+            "uuid": "45e19ef7-c10a-44ce-8413-0d9edfbbdcaa"
+        },
+        "version": "0.6.4",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/mtxr.sqltools-driver-mysql-0.6.4-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "mtxr.sqltools-driver-mysql-0.6.4-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "45e19ef7-c10a-44ce-8413-0d9edfbbdcaa",
+            "publisherId": "952fc94a-735a-4caa-92ce-e1011fbc9780",
+            "publisherDisplayName": "mtxr",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "hurly.sqltools-oracle-driver",
+            "uuid": "7cfc984f-111f-4bef-bf25-bfbc58096c87"
+        },
+        "version": "0.1.14",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/hurly.sqltools-oracle-driver-0.1.14-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "hurly.sqltools-oracle-driver-0.1.14-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "7cfc984f-111f-4bef-bf25-bfbc58096c87",
+            "publisherId": "e28a36f4-ad8c-459c-b465-08f28d8d7427",
+            "publisherDisplayName": "hurly",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "gera2ld.markmap-vscode",
+            "uuid": "2392d4a0-3976-49ea-af95-7001abb8c75a"
+        },
+        "version": "0.2.11",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/gera2ld.markmap-vscode-0.2.11-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "gera2ld.markmap-vscode-0.2.11-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "2392d4a0-3976-49ea-af95-7001abb8c75a",
+            "publisherId": "4e3f72cb-a32e-4f0b-bd61-4f5f85efe190",
+            "publisherDisplayName": "gera2ld",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "golang.go",
+            "uuid": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da"
+        },
+        "version": "0.48.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/golang.go-0.48.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "golang.go-0.48.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "d6f6cfea-4b6f-41f4-b571-6ad2ab7918da",
+            "publisherId": "dbf6ae0a-da75-4167-ac8b-75b4512f2153",
+            "publisherDisplayName": "golang",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.vscode-github-actions",
+            "uuid": "04f49bfc-8330-4eee-8237-ea938fb755ef"
+        },
+        "version": "0.27.2",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/github.vscode-github-actions-0.27.2-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.vscode-github-actions-0.27.2-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "04f49bfc-8330-4eee-8237-ea938fb755ef",
+            "publisherId": "7c1c19cd-78eb-4dfb-8999-99caf7679002",
+            "publisherDisplayName": "GitHub",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "mongodb.mongodb-vscode",
+            "uuid": "4b6540da-bfa3-4b88-b9e3-df8f2d161124"
+        },
+        "version": "1.13.3",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/mongodb.mongodb-vscode-1.13.3-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "mongodb.mongodb-vscode-1.13.3-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "4b6540da-bfa3-4b88-b9e3-df8f2d161124",
+            "publisherId": "96be5892-f133-40ba-88dd-d450cff649f0",
+            "publisherDisplayName": "mongodb",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "ms-azuretools.vscode-containers",
+            "uuid": "2cd1d691-3d69-4d2d-ae39-fda4bc4cfd3d"
+        },
+        "version": "2.1.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/ms-azuretools.vscode-containers-2.1.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "ms-azuretools.vscode-containers-2.1.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "2cd1d691-3d69-4d2d-ae39-fda4bc4cfd3d",
+            "publisherId": "52b787f2-79a9-4f32-99b4-393afe3005d3",
+            "publisherDisplayName": "ms-azuretools",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "dart-code.flutter",
+            "uuid": "f6c3ec04-6057-4d9c-b997-69cba07a6158"
+        },
+        "version": "3.116.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/dart-code.flutter-3.116.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "dart-code.flutter-3.116.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "f6c3ec04-6057-4d9c-b997-69cba07a6158",
+            "publisherId": "a606ecbb-a8fb-4c35-b29a-5e8842d82af2",
+            "publisherDisplayName": "Dart-Code",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "dart-code.dart-code",
+            "uuid": "f57f68ea-9ee8-42b5-9a97-041d3e4278c4"
+        },
+        "version": "3.116.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/dart-code.dart-code-3.116.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "dart-code.dart-code-3.116.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "f57f68ea-9ee8-42b5-9a97-041d3e4278c4",
+            "publisherId": "a606ecbb-a8fb-4c35-b29a-5e8842d82af2",
+            "publisherDisplayName": "Dart-Code",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "mtxr.sqltools-driver-sqlite",
+            "uuid": "5862e2aa-ace9-476d-8b10-3b72fa494604"
+        },
+        "version": "0.5.2",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/mtxr.sqltools-driver-sqlite-0.5.2-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "mtxr.sqltools-driver-sqlite-0.5.2-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "5862e2aa-ace9-476d-8b10-3b72fa494604",
+            "publisherId": "952fc94a-735a-4caa-92ce-e1011fbc9780",
+            "publisherDisplayName": "mtxr",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "task.vscode-task",
+            "uuid": "09e56a5f-d2c3-4637-966e-0b8e20f20d2e"
+        },
+        "version": "0.3.2",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/task.vscode-task-0.3.2-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "task.vscode-task-0.3.2-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "09e56a5f-d2c3-4637-966e-0b8e20f20d2e",
+            "publisherId": "e3844bff-50e2-44ca-9bb0-a71932d17ba9",
+            "publisherDisplayName": "Task",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "isApplicationScoped": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "christopherhx.azure-pipelines-vscode-ext",
+            "uuid": "79dd0390-1c94-4208-893d-acad3af29820"
+        },
+        "version": "0.2.13",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/christopherhx.azure-pipelines-vscode-ext-0.2.13-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "christopherhx.azure-pipelines-vscode-ext-0.2.13-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "79dd0390-1c94-4208-893d-acad3af29820",
+            "publisherId": "f09d0363-f7c3-41df-837f-4e15a39b8a8d",
+            "publisherDisplayName": "christopherhx",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "redhat.vscode-yaml",
+            "uuid": "2061917f-f76a-458a-8da9-f162de22b97e"
+        },
+        "version": "1.18.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/redhat.vscode-yaml-1.18.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "redhat.vscode-yaml-1.18.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "2061917f-f76a-458a-8da9-f162de22b97e",
+            "publisherId": "eed56242-9699-4317-8bc7-e9f4b9bdd3ff",
+            "publisherDisplayName": "Red Hat",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "ms-kubernetes-tools.vscode-kubernetes-tools",
+            "uuid": "4837e4f3-1b01-4732-b1a6-daa57ef64cab"
+        },
+        "version": "1.3.25",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/ms-kubernetes-tools.vscode-kubernetes-tools-1.3.25-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "ms-kubernetes-tools.vscode-kubernetes-tools-1.3.25-universal",
+        "metadata": {
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "4837e4f3-1b01-4732-b1a6-daa57ef64cab",
+            "publisherId": "d5b943eb-b968-4c2d-b241-a117ce9c3961",
+            "publisherDisplayName": "ms-kubernetes-tools",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "redocly.openapi-vs-code",
+            "uuid": "43ac9139-82a5-4580-856a-71792a204014"
+        },
+        "version": "0.7.1",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/redocly.openapi-vs-code-0.7.1-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "redocly.openapi-vs-code-0.7.1-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "43ac9139-82a5-4580-856a-71792a204014",
+            "publisherId": "6afdf53e-62e5-438d-b497-c469c347c154",
+            "publisherDisplayName": "Redocly",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "vue.volar",
+            "uuid": "a95ee795-1576-4ffa-acda-8d6e6a95c584"
+        },
+        "version": "3.0.5",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/vue.volar-3.0.5-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "vue.volar-3.0.5-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754220778,
+            "pinned": false,
+            "source": "gallery",
+            "id": "a95ee795-1576-4ffa-acda-8d6e6a95c584",
+            "publisherId": "49983e2f-38ad-4441-beea-d678b53d0549",
+            "publisherDisplayName": "Vue",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "gitlab.gitlab-workflow",
+            "uuid": "01826860-d71c-4734-9cf8-dc1c07baa5f9"
+        },
+        "version": "6.36.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/gitlab.gitlab-workflow-6.36.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "gitlab.gitlab-workflow-6.36.0-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754549422553,
+            "pinned": false,
+            "source": "gallery",
+            "id": "01826860-d71c-4734-9cf8-dc1c07baa5f9",
+            "publisherId": "11e0db43-01fa-42a2-aa75-d40835a05df7",
+            "publisherDisplayName": "GitLab",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "eamodio.gitlens",
+            "uuid": "4de763bd-505d-4978-9575-2b7696ecf94e"
+        },
+        "version": "17.3.4",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/eamodio.gitlens-17.3.4-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "eamodio.gitlens-17.3.4-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754982711299,
+            "pinned": false,
+            "source": "gallery",
+            "id": "4de763bd-505d-4978-9575-2b7696ecf94e",
+            "publisherId": "678d198b-9b2e-49d3-96ff-6d801c9575df",
+            "publisherDisplayName": "GitKraken",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.copilot"
+        },
+        "version": "1.354.1728",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/github.copilot-1.354.1728",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.copilot-1.354.1728",
+        "metadata": {
+            "installedTimestamp": 1754986312160,
+            "pinned": true,
+            "source": "vsix"
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.copilot-chat"
+        },
+        "version": "0.30.0",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/github.copilot-chat-0.30.0",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.copilot-chat-0.30.0",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1754987067784,
+            "pinned": true,
+            "source": "vsix"
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.vscode-pull-request-github",
+            "uuid": "69ddd764-339a-4ecc-97c1-9c4ece58e36d"
+        },
+        "version": "0.116.1",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/github.vscode-pull-request-github-0.116.1-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.vscode-pull-request-github-0.116.1-universal",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1755069961382,
+            "pinned": false,
+            "source": "gallery",
+            "id": "69ddd764-339a-4ecc-97c1-9c4ece58e36d",
+            "publisherId": "7c1c19cd-78eb-4dfb-8999-99caf7679002",
+            "publisherDisplayName": "GitHub",
+            "targetPlatform": "universal",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "continue.continue",
+            "uuid": "c8d442ab-9ee3-4891-a5b0-994f14f54c94"
+        },
+        "version": "1.0.23",
+        "location": {
+            "$mid": 1,
+            "path": "~/.vscode-oss/extensions/continue.continue-1.0.23-darwin-arm64",
+            "scheme": "file"
+        },
+        "relativeLocation": "continue.continue-1.0.23-darwin-arm64",
+        "metadata": {
+            "isApplicationScoped": false,
+            "isMachineScoped": false,
+            "isBuiltin": false,
+            "installedTimestamp": 1755356526111,
+            "pinned": false,
+            "source": "gallery",
+            "id": "c8d442ab-9ee3-4891-a5b0-994f14f54c94",
+            "publisherId": "8701b9ff-bc1c-483c-b95d-ac0ba7d51a0b",
+            "publisherDisplayName": "Continue",
+            "targetPlatform": "linux-x64",
+            "updated": true,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "jeanp413.open-remote-ssh"
+        },
+        "version": "0.0.49",
+        "location": {
+            "$mid": 1,
+            "fsPath": "~/.vscode-oss/extensions/jeanp413.open-remote-ssh-0.0.49-universal",
+            "path": "~/.vscode-oss/extensions/jeanp413.open-remote-ssh-0.0.49-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "jeanp413.open-remote-ssh-0.0.49-universal",
+        "metadata": {
+            "installedTimestamp": 1755356910230,
+            "pinned": false,
+            "source": "gallery",
+            "id": "9fc16cea-08e2-4ae5-bf75-224004d722ff",
+            "publisherId": "82e59b79-acc5-4a5b-81cb-9303cbdc05cb",
+            "publisherDisplayName": "jeanp413",
+            "targetPlatform": "universal",
+            "updated": false,
+            "private": false,
+            "isPreReleaseVersion": false,
+            "hasPreReleaseVersion": false
+        }
+    }
+]
