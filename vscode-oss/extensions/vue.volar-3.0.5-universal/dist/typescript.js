@@ -1,0 +1,1 @@
+module.exports = require("/Applications/VSCodium.app/Contents/Resources/app/extensions/node_modules/typescript/lib/typescript.js");
