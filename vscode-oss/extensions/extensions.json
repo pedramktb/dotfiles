@@ -749,7 +749,6 @@
         "version": "0.0.49",
         "location": {
             "$mid": 1,
-            "fsPath": "~/.vscode-oss/extensions/jeanp413.open-remote-ssh-0.0.49-universal",
             "path": "~/.vscode-oss/extensions/jeanp413.open-remote-ssh-0.0.49-universal",
             "scheme": "file"
         },
