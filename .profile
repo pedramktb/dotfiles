@@ -4,6 +4,7 @@ _darwin_profile() {
   alias code=codium
   export CLICOLOR=1
   PATH="/opt/homebrew/bin:$PATH"
+  alias brew-upgrade-casks='list=$(brew outdated --cask --greedy) && [ -z "$list" ] || (brew uninstall --cask $list && brew install --cask $list)'
 }
 
 [[ $(uname) == "Darwin" ]] && _darwin_profile
